@@ -2,6 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const mysql = require("mysql");
 const server = express();
+var cors = require('cors')
+server.use(cors())
 server.use(bodyParser.json());
 
 
@@ -125,3 +127,4 @@ server.put("/api/student/update/:id", (req, res) => {
       }
     });
   });
+

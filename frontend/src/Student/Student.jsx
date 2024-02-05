@@ -104,10 +104,10 @@ function Student()
   return (
     <div>
        <h1>Student Details</h1>
-       <div class="container mt-4" >
+       <div className="container mt-4" >
           <form>
-              <div class="form-group">
-               <input  type="text" class="form-control" id="student_id" hidden
+              <div className="form-group">
+               <input  type="text" className="form-control" id="student_id" hidden
                value={id}
                onChange={(event) =>
                 {
@@ -116,7 +116,7 @@ function Student()
                
                />
                 <label>Student Name</label>
-                <input  type="text" class="form-control" id="name"
+                <input  type="text" className="form-control" id="name"
                 value={stname}
                 onChange={(event) =>
                   {
@@ -124,9 +124,9 @@ function Student()
                   }}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label>Course</label>
-                <input  type="text" class="form-control" id="course" 
+                <input  type="text" className="form-control" id="course" 
                  value={course}
                   onChange={(event) =>
                     {
@@ -135,9 +135,9 @@ function Student()
                 />
               </div>
 
-              <div class="form-group">
+              <div className="form-group">
                 <label>Fee</label>
-                <input type="text" class="form-control" id="fee" 
+                <input type="text" className="form-control" id="fee" 
                   value={fee}
                 onChange={(event) =>
                   {
@@ -147,13 +147,13 @@ function Student()
               </div>
 
                  <div>
-              <button   class="btn btn-primary mt-4"  onClick={save}>Register</button>
-              <button   class="btn btn-warning mt-4"  onClick={update}>Update</button>
+              <button   className="btn btn-primary mt-4"  onClick={save}>Register</button>
+              <button   className="btn btn-warning mt-4"  onClick={update}>Update</button>
               </div>   
             </form>
           </div>
 
-<table class="table table-dark" align="center">
+<table className="table table-dark" align="center">
   <thead>
     <tr>
       <th scope="col">Student Id</th>
@@ -174,8 +174,8 @@ function Student()
                 <td>{student.course}</td>
                 <td>{student.fee}</td>        
                 <td>
-                    <button type="button" class="btn btn-warning"  onClick={() => editStudent(student)} >Edit</button>  
-                    <button type="button" class="btn btn-danger" onClick={() => DeleteStudent(student.id)}>Delete</button>
+                    <button type="button" className="btn btn-warning"  onClick={() => editStudent(student)} >Edit</button>  
+                    <button type="button" className="btn btn-danger" onClick={() => DeleteStudent(student.id)}>Delete</button>
                 </td>
                 </tr>
             </tbody>
